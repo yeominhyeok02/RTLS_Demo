@@ -1,12 +1,12 @@
-import mysql from 'mysql2/promise';
+import pg from 'pg';
 
-export const pool = mysql.createPool({
-  host: process.env.MYSQL_HOST ?? 'localhost',
-  port: Number(process.env.MYSQL_PORT ?? 3306),
-  user: process.env.MYSQL_USER ?? 'root',
-  password: process.env.MYSQL_PASSWORD ?? '',
-  database: process.env.MYSQL_DATABASE ?? 'rtls_demo',
-  waitForConnections: true,
-  connectionLimit: 10,
-  queueLimit: 0
+const { Pool } = pg;
+
+export const pool = new Pool({
+  host: process.env.POSTGRES_HOST ?? 'localhost',
+  port: Number(process.env.POSTGRES_PORT ?? 5432),
+  user: process.env.POSTGRES_USER ?? 'postgres',
+  password: process.env.POSTGRES_PASSWORD ?? '',
+  database: process.env.POSTGRES_DATABASE ?? 'rtls_demo',
+  max: 10
 });
