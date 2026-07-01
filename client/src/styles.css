@@ -50,3 +50,95 @@ h1 {
   margin: 18px 0 0;
   max-width: 560px;
 }
+
+.home-panel {
+  width: min(100%, 680px);
+}
+
+.feature-menu {
+  display: grid;
+  gap: 12px;
+  margin-top: 32px;
+}
+
+.feature-button {
+  background: #ffffff;
+  border: 1px solid #d9ded7;
+  border-radius: 8px;
+  color: inherit;
+  cursor: pointer;
+  display: grid;
+  gap: 6px;
+  padding: 18px 20px;
+  text-align: left;
+  text-decoration: none;
+  transition:
+    border-color 160ms ease,
+    box-shadow 160ms ease,
+    transform 160ms ease;
+}
+
+.feature-button:hover {
+  border-color: #2c6b58;
+  box-shadow: 0 12px 32px rgb(24 32 38 / 10%);
+  transform: translateY(-1px);
+}
+
+.feature-title {
+  font-size: 1.1rem;
+  font-weight: 800;
+}
+
+.feature-description {
+  color: #5b6661;
+  font-size: 0.95rem;
+}
+
+.sensmap-page {
+  align-items: stretch;
+}
+
+.sensmap-shell {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  width: 100%;
+}
+
+.page-header {
+  align-items: flex-start;
+  display: flex;
+  gap: 16px;
+  justify-content: space-between;
+}
+
+.page-header h1 {
+  font-size: clamp(2.2rem, 4vw, 4.5rem);
+}
+
+.secondary-button {
+  background: #ffffff;
+  border: 1px solid #d9ded7;
+  border-radius: 8px;
+  color: #182026;
+  cursor: pointer;
+  font: inherit;
+  font-weight: 700;
+  padding: 10px 14px;
+  text-decoration: none;
+}
+
+.secondary-button:hover {
+  border-color: #2c6b58;
+}
+
+.sensmap-stage {
+  align-items: center;
+  background: #ffffff;
+  border: 1px solid #d9ded7;
+  border-radius: 8px;
+  color: #5b6661;
+  display: flex;
+  min-height: 420px;
+  padding: 24px;
+}
